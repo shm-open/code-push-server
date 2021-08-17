@@ -34,7 +34,7 @@ services:
       - db
       - redis
   db:
-    image: mysql:5.7.33
+    image: mysql:5.7.35
     volumes:
       - data-mysql:/var/lib/mysql
       - ./sql/codepush-all.sql:/docker-entrypoint-initdb.d/codepush-all.sql
