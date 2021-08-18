@@ -45,7 +45,7 @@ services:
     networks:
       - dbnet
   redis:
-    image: redis:4.0.11-alpine
+    image: redis:4.0.14-alpine
     volumes:
       - data-redis:/data
     ports:
