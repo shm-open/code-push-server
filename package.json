@@ -60,7 +60,7 @@
     "rand-token": "0.4.0",
     "recursive-readdir": "2.2.2",
     "redis": "2.8.0",
-    "request": "2.85.0",
+    "request": "2.88.2",
     "sequelize": "4.37.1",
     "serve-favicon": "2.4.5",
     "slash": "2.0.0",
