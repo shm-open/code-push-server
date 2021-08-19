@@ -63,7 +63,7 @@
     "request": "2.88.2",
     "sequelize": "4.37.1",
     "serve-favicon": "2.5.0",
-    "slash": "3.0.0",
+    "slash": "4.0.0",
     "upyun": "3.4.4",
     "validator": "13.6.0",
     "yargs": "17.1.1",
