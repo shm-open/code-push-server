@@ -64,7 +64,7 @@
     "sequelize": "4.37.1",
     "serve-favicon": "2.5.0",
     "slash": "3.0.0",
-    "upyun": "3.3.9",
+    "upyun": "3.4.4",
     "validator": "10.6.0",
     "yargs": "17.1.1",
     "yazl": "2.4.3"
