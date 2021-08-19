@@ -44,7 +44,7 @@
     "cos-nodejs-sdk-v5": "2.10.0",
     "diff-match-patch": "1.0.5",
     "express": "4.17.1",
-    "extract-zip": "1.7.0",
+    "extract-zip": "2.0.1",
     "formidable": "1.2.2",
     "fs-extra": "7.0.1",
     "helmet": "4.6.0",
