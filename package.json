@@ -44,7 +44,7 @@
     "diff-match-patch": "1.0.5",
     "express": "4.17.1",
     "extract-zip": "2.0.1",
-    "formidable": "1.2.6",
+    "formidable": "2.0.1",
     "fs-extra": "10.0.0",
     "helmet": "4.6.0",
     "jschardet": "3.0.0",
