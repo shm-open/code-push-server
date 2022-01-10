@@ -68,7 +68,7 @@
     "yazl": "2.5.1"
   },
   "devDependencies": {
-    "@shm-open/eslint-config-bundle": "1.7.6",
+    "@shm-open/eslint-config-bundle": "1.7.7",
     "mocha": "9.1.3",
     "should": "13.2.3",
     "standard-version": "9.3.2",
