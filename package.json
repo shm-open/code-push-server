@@ -62,7 +62,7 @@
     "qiniu": "7.4.0",
     "rand-token": "1.0.1",
     "recursive-readdir": "2.2.2",
-    "redis": "3.1.2",
+    "redis": "4.0.3",
     "sequelize": "6.16.0",
     "slash": "3.0.0",
     "upyun": "3.4.4",
