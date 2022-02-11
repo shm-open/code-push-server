@@ -51,7 +51,7 @@
     "helmet": "5.0.2",
     "jschardet": "3.0.0",
     "jsonwebtoken": "8.5.1",
-    "kv-logger": "0.5.2",
+    "kv-logger": "0.5.1",
     "lodash": "4.17.21",
     "moment": "2.29.1",
     "mysql2": "2.3.3",
