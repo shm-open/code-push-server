@@ -69,7 +69,7 @@
     "yazl": "2.5.1"
   },
   "devDependencies": {
-    "@shm-open/eslint-config-bundle": "1.8.1",
+    "@shm-open/eslint-config-bundle": "1.8.2",
     "@types/body-parser": "1.19.2",
     "@types/cookie-parser": "1.4.2",
     "@types/fs-extra": "9.0.13",
