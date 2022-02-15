@@ -75,7 +75,7 @@
     "@types/fs-extra": "9.0.13",
     "@types/jsonwebtoken": "8.5.8",
     "@types/lodash": "4.14.178",
-    "@types/node-fetch": "2.5.12",
+    "@types/node-fetch": "2.6.0",
     "@types/nodemailer": "6.4.4",
     "@types/validator": "13.7.1",
     "@types/yazl": "2.4.2",
