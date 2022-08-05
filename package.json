@@ -81,7 +81,7 @@
     "@types/jsonwebtoken": "8.5.8",
     "@types/lodash": "4.14.182",
     "@types/node-fetch": "2.6.2",
-    "@types/nodemailer": "6.4.4",
+    "@types/nodemailer": "6.4.5",
     "@types/recursive-readdir": "2.2.1",
     "@types/validator": "13.7.5",
     "@types/yazl": "2.4.2",
