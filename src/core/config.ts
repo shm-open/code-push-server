@@ -53,6 +53,8 @@ export const config = {
         region: process.env.AWS_REGION,
         // binary files download host address.
         downloadUrl: process.env.AWS_DOWNLOAD_URL || process.env.DOWNLOAD_URL,
+        endpoint: process.env.S3_ENDPOINT, // needed when working with S3-compatible services
+        forcePathStyle: toBool(process.env.S3_FORCE_PATH_STYLE), // some S3-compatible services require path-style addressing
     },
     // Config for Aliyun OSS (https://www.aliyun.com/product/oss) when storageType value is "oss".
     oss: {
