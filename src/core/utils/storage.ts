@@ -84,7 +84,10 @@ function uploadFileToS3(key: string, filePath: string, logger: Logger): Promise<
             sessionToken: _.get(config, 's3.sessionToken'),
             region: _.get(config, 's3.region'),
         });
-        const s3 = new AWS.S3();
+        const s3 = new AWS.S3({
+            endpoint: _.get(config, 's3.endpoint'),
+            s3ForcePathStyle: _.get(config, 's3.forcePathStyle'),
+        });
         fs.readFile(filePath, (err, data) => {
             if (err) {
                 reject(new AppError(err));
