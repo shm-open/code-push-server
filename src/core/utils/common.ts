@@ -16,10 +16,11 @@ const streamPipeline = util.promisify(pipeline);
 export function parseVersion(versionNo: string) {
     let version = '0';
     let data = null;
-    if ((data = versionNo.match(/^([0-9]{1,3}).([0-9]{1,5}).([0-9]{1,10})$/))) {
+    // NOTE: Major is allowed up to 4 digits (e.g. "6666.3.678")
+    if ((data = versionNo.match(/^([0-9]{1,4})\.([0-9]{1,5})\.([0-9]{1,10})$/))) {
         // "1.2.3"
         version = data[1] + _.padStart(data[2], 5, '0') + _.padStart(data[3], 10, '0');
-    } else if ((data = versionNo.match(/^([0-9]{1,3}).([0-9]{1,5})$/))) {
+    } else if ((data = versionNo.match(/^([0-9]{1,4})\.([0-9]{1,5})$/))) {
         // "1.2"
         version = data[1] + _.padStart(data[2], 5, '0') + _.padStart('0', 10, '0');
     }
@@ -34,7 +35,7 @@ export function validatorVersion(versionNo: string) {
     if (versionNo === '*') {
         // "*"
         flag = true;
-    } else if ((data = versionNo.match(/^([0-9]{1,3}).([0-9]{1,5}).([0-9]{1,10})$/))) {
+    } else if ((data = versionNo.match(/^([0-9]{1,4})\.([0-9]{1,5})\.([0-9]{1,10})$/))) {
         // "1.2.3"
         flag = true;
         min = data[1] + _.padStart(data[2], 5, '0') + _.padStart(data[3], 10, '0');
@@ -42,19 +43,19 @@ export function validatorVersion(versionNo: string) {
             data[1] +
             _.padStart(data[2], 5, '0') +
             _.padStart(`${parseInt(data[3], 10) + 1}`, 10, '0');
-    } else if ((data = versionNo.match(/^([0-9]{1,3}).([0-9]{1,5})(\.\*){0,1}$/))) {
+    } else if ((data = versionNo.match(/^([0-9]{1,4})\.([0-9]{1,5})(\.\*){0,1}$/))) {
         // "1.2" "1.2.*"
         flag = true;
         min = data[1] + _.padStart(data[2], 5, '0') + _.padStart('0', 10, '0');
         max =
             data[1] + _.padStart(`${parseInt(data[2], 10) + 1}`, 5, '0') + _.padStart('0', 10, '0');
-    } else if ((data = versionNo.match(/^~([0-9]{1,3}).([0-9]{1,5}).([0-9]{1,10})$/))) {
+    } else if ((data = versionNo.match(/^~([0-9]{1,4})\.([0-9]{1,5})\.([0-9]{1,10})$/))) {
         // "~1.2.3"
         flag = true;
         min = data[1] + _.padStart(data[2], 5, '0') + _.padStart(data[3], 10, '0');
         max =
             data[1] + _.padStart(`${parseInt(data[2], 10) + 1}`, 5, '0') + _.padStart('0', 10, '0');
-    } else if ((data = versionNo.match(/^\^([0-9]{1,3}).([0-9]{1,5}).([0-9]{1,10})$/))) {
+    } else if ((data = versionNo.match(/^\^([0-9]{1,4})\.([0-9]{1,5})\.([0-9]{1,10})$/))) {
         // "^1.2.3"
         flag = true;
         min = data[1] + _.padStart(data[2], 5, '0') + _.padStart(data[3], 10, '0');
@@ -64,7 +65,7 @@ export function validatorVersion(versionNo: string) {
             _.padStart('0', 10, '0');
     } else if (
         (data = versionNo.match(
-            /^([0-9]{1,3}).([0-9]{1,5}).([0-9]{1,10})\s?-\s?([0-9]{1,3}).([0-9]{1,5}).([0-9]{1,10})$/,
+            /^([0-9]{1,4})\.([0-9]{1,5})\.([0-9]{1,10})\s?-\s?([0-9]{1,4})\.([0-9]{1,5})\.([0-9]{1,10})$/,
         ))
     ) {
         // "1.2.3 - 1.2.7"
@@ -76,7 +77,7 @@ export function validatorVersion(versionNo: string) {
             _.padStart(`${parseInt(data[6], 10) + 1}`, 10, '0');
     } else if (
         (data = versionNo.match(
-            /^>=([0-9]{1,3}).([0-9]{1,5}).([0-9]{1,10})\s?<([0-9]{1,3}).([0-9]{1,5}).([0-9]{1,10})$/,
+            /^>=([0-9]{1,4})\.([0-9]{1,5})\.([0-9]{1,10})\s?<([0-9]{1,4})\.([0-9]{1,5})\.([0-9]{1,10})$/,
         ))
     ) {
         // ">=1.2.3 <1.2.7"
