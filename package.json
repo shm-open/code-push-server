@@ -55,7 +55,7 @@
     "jsonwebtoken": "8.5.1",
     "kv-logger": "0.5.3",
     "lodash": "4.17.21",
-    "moment": "2.29.3",
+    "moment": "2.30.1",
     "mysql2": "2.3.3",
     "node-fetch": "2.6.7",
     "nodemailer": "6.7.7",
