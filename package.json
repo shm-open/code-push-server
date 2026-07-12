@@ -63,7 +63,7 @@
     "qiniu": "7.7.0",
     "rand-token": "1.0.1",
     "recursive-readdir": "2.2.2",
-    "redis": "4.2.0",
+    "redis": "4.7.1",
     "sequelize": "6.21.3",
     "slash": "3.0.0",
     "validator": "13.7.0",
